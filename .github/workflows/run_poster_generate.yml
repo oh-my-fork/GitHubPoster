@@ -88,7 +88,7 @@ jobs:
       - name: Run sync twitter script
         if: contains(env.TYPE, 'twitter')
         run: |
-          python -m github_poster twitter --twitter_user_name ${{ secrets.TWITTER_USER_NAME }} --me ${{ env.ME }}
+          python -m github_poster twitter --twitter_user_name ${{ env.TWITTER_USER_NAME }} --me ${{ env.ME }}
 
       - name: Run sync github script
         if: contains(env.TYPE, 'github')
