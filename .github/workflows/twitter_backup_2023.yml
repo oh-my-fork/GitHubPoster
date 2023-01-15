@@ -1,4 +1,4 @@
-name: Twitter Back Up (2021-2022)
+name: Twitter Back Up (2023)
 
 on:
   workflow_dispatch:
