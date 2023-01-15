@@ -2,6 +2,8 @@ name: Twitter Back Up (2021-2022)
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   lint_and_test:
@@ -34,8 +36,7 @@ jobs:
           pip install -r requirements-dev.txt
       - name: Run twitter back up 
         run: |
-           python -m github_poster twitter --twitter_user_name "disksing" --year 2021 --me "disksing" | tee OUT_FOLDER/"${{ github.event.inputs.twitter_user_name }}".2021.txt
-           python -m github_poster twitter --twitter_user_name "disksing" --year 2022 --me "disksing" | tee OUT_FOLDER/"${{ github.event.inputs.twitter_user_name }}".2022.txt
+           python -m github_poster twitter --twitter_user_name "disksing" --year 2023 --me "disksing" | tee OUT_FOLDER/"${{ github.event.inputs.twitter_user_name }}".2023.txt
 
       - name: Push new twitter back up
         run: |
